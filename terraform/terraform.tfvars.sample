@@ -1,0 +1,16 @@
+aci_runner_rg       = "rg-aci-runner"
+aci_runner_location = "japaneast"
+prefix              = "your-name"
+appinsights_ikey    = "your-appinsights-ikey"
+log_analytics = {
+  workspace_id  = "your-workspace-id"
+  workspace_key = "your-workspace-id"
+}
+github_token = "your-gh-pat"
+github_repo  = "your-gh-repo"
+azure_credentials = {
+  subscription_id = "your-azure-subscription-id"
+  tenant_id       = "your-azuread-tenant-id"
+  client_id       = "your-serviceprincipal-client-id"
+  client_secret   = "your-serviceprincipal-client-secret"
+}
