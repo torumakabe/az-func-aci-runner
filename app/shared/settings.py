@@ -52,8 +52,10 @@ if KEY_VAULT_NAME != '':
     client = SecretClient(vault_url=kv_url, credential=credential)
 
     try:
-        LOG_ANALYTICS_WS_ID = client.get_secret("la-ws-id")
-        LOG_ANALYTICS_WS_KEY = client.get_secret("la-ws-key")
+        secret_id = client.get_secret("la-ws-id")
+        LOG_ANALYTICS_WS_ID = secret_id.value
+        secret_key = client.get_secret("la-ws-key")
+        LOG_ANALYTICS_WS_KEY = secret_key.value
     except core.exceptions.HttpResponseError:
         raise
 
